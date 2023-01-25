@@ -1,0 +1,92 @@
+/* Variaveis Gerais <------------------------------------------------------------------------------ */
+
+:root {
+  --bg-1: #000000;
+  --bg-2: #111111;
+  --bg-3: #2e2e2e;
+  --bg-4: #ffffff;
+  --tx-1: #ffffff;
+}
+
+/* Reset de container <---------------------------------------------------------------------------- */
+
+body {
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+}
+ul {
+  margin: 0px;
+  padding: 0px;
+  list-style: none;
+}
+a {
+  text-decoration: none;
+}
+
+/* CSS Propriedades  <----------------------------------------------------------------------------- */
+
+.header-bg {
+  background-color: var(--bg-1);
+}
+
+.header {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+  max-width: 1200px;
+  box-sizing: border-box;
+  margin: 0 auto;
+}
+
+.header-menu {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 40px;
+}
+.header-menu a {
+  color: var(--tx-1);
+  display: inline-block;
+  padding: 16px 0px;
+  font-size: 18px;
+  position: relative;
+}
+
+.header-menu a::after {
+  content: "";
+  display: block;
+  height: 2px;
+  width: 0%;
+  background: var(--bg-4);
+  margin-top: 4px;
+}
+.header-menu a:hover::after {
+  width: 100%;
+  transition: 0.3s;
+  position: absolute;
+}
+
+@media (max-width: 800px) {
+  .header-menu a {
+    background: var(--bg-2);
+    padding: 16px 12px;
+    border-radius: 4px;
+  }
+  .header-menu a:hover {
+    background: var(--bg-3);
+  }
+  .header-menu a::after {
+    display: none;
+  }
+}
+@media (max-width: 600px) {
+  .header-menu a {
+    padding: 8px 12px;
+    font-size: 14px;
+  }
+  .header-menu {
+    gap: 12px;
+  }
+}
