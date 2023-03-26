@@ -2,26 +2,26 @@
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 0px 40px;
-  max-width: 1200px;
-  box-sizing: border-box;
-  padding: 0px 20px;
-  margin: 0px auto;
 }
 .introducao h1 {
   margin-bottom: 32px;
 }
+.introducao-bg {
+  background: var(--cor-12) url(../../img/dec/bottom-left.svg) no-repeat bottom
+    160px left 20px;
+}
 
 .introducao p {
-  margin-bottom: 20px;
-  color: #b2b2b2;
+  margin-bottom: 30px;
 }
 .introducao-conteudo {
   align-self: end;
-  padding-bottom: 200px;
+  padding-bottom: 240px;
 }
 
 .introducao img {
   height: 100%;
+  width: 100%;
   object-fit: cover;
   border-radius: 4px;
 }

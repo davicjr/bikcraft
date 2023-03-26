@@ -4,12 +4,10 @@
   gap: 20px;
   justify-content: space-between;
   align-items: center;
-  padding: 20px;
-  max-width: 1200px;
-  box-sizing: border-box;
-  margin: 0 auto;
 }
-
+.header-bg {
+  background-color: #000000;
+}
 .header-menu {
   display: flex;
   flex-wrap: wrap;
@@ -31,11 +29,12 @@
   width: 0%;
   background: #ffffff;
   margin-top: 4px;
-}
-.header-menu a:hover::after {
-  width: 100%;
-  transition: 0.5s;
+  transition: 0.3s;
   position: absolute;
+}
+.header-menu a:hover::after,
+.header-menu a.ativo::after {
+  width: 100%;
 }
 
 @media (max-width: 800px) {
